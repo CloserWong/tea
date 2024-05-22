@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<style>
+    #find {
+        fill: white;
+    }
+    #cart path {
+    fill: white;
+}
+</style>
+<body>
+    <header>
+        <div id="logo">Tea<br>&nbsp;&nbsp;house
+        </div> <nav><a id="nav--link" class="active" href="index.html">Главная</a>
+             <a id="nav--link" class="" href="shop.html">Каталог</a>
+              
+              <a id="nav--link" href="blog.html">Блог</a>
+              
+              <a id="nav--link" href="Personal account.html">Личный кабинет</a>
+              
+             </nav> 
+    </header>
+    <div id="button--container">
+      
+      <style>
+        h3 {
+            color: whitesmoke; /* темно-белый цвет текста */
+            animation: fadeIn 2s ease-in-out; /* добавление анимации */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h3>Наши достижения:
+        <br>
+        Расширение ассортимента: Внедрение новых видов и сортов чая в ассортимент магазина, таких как эксклюзивные сорта из разных регионов, редкие чаи с ограниченным выпуском или экологически чистые органические сорта. Это позволит привлечь больше клиентов и удовлетворить потребности разнообразной аудитории.
+        <br>
+        Внедрение программы лояльности: Создание программы лояльности для постоянных клиентов, предоставляющей бонусы, скидки, подарки или специальные предложения за покупки. Это поможет увеличить лояльность клиентов и стимулировать их к повторным покупкам.
+        <br>
+        Развитие онлайн-присутствия: Создание и продвижение онлайн-платформы для продажи чая, что позволит привлечь новых клиентов из разных регионов, улучшить доступность продукции и упростить процесс покупки.
+        <br>
+        Организация чайных мероприятий: Проведение мероприятий, таких как дегустации чая, мастер-классы по приготовлению чая, чайные вечера или семинары о чайной культуре. Это позволит укрепить позиции магазина как эксперта в области чая и привлечь внимание новых клиентов.
+        <br>
+        Социальная ответственность: Внедрение программы социальной ответственности, такой как закупка чая у фермеров справедливой торговли или устойчивое производство с минимальным негативным воздействием на окружающую среду. Это поможет укрепить имидж магазина как социально ответственного бренда и привлечь клиентов, ценящих устойчивое потребление.
+    </h3>
+        
+    </div>
+    
+
+
+    <div class="inf_tea">
+        <canvas id="repairChart"></canvas>
+    </div>
+
+    <style>
+    @keyframes slideIn {
+        from {
+        opacity: 0;
+        transform: translateY(50px);
+        }
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+        }
+        
+        .textcols-item {
+        animation: slideIn 1s ease forwards;
+        }
+       
+        .gallery {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .image {
+          margin: 50px;
+          cursor: pointer;
+        }
+        .image img {
+          width: 200px;
+          height: auto;
+          border-radius: 50px;
+        }
+      </style>
+    </head>
+    <body>
+    
+    <div class="gallery">
+      <div class="image">
+        <img src="images\чай1.jpg" alt="Чай 1">
+      </div>
+      <div class="image">
+        <img src="images\чай2.jpg" alt="Чай 2">
+      </div>
+      <div class="image">
+        <img src="images\чай3.png" alt="Чай 3">
+      </div>
+      <!-- Добавьте больше изображений по мере необходимости -->
+    </div>
+    
+    <script>
+      const images = document.querySelectorAll('.image');
+      
+      images.forEach(image => {
+        image.addEventListener('click', () => {
+          const currentImage = image.querySelector('img');
+          const nextImage = image.nextElementSibling ? image.nextElementSibling.querySelector('img') : images[0].querySelector('img');
+          currentImage.style.display = 'none';
+          nextImage.style.display = 'block';
+        });
+      });
+    </script>
+    </div>
+    <footer>
+        <style>
+            body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f9f9f9;
+            }
+        
+            .container {
+              text-align: center;
+              margin-top: 50px;
+            }
+        
+            .svg-container {
+              position: relative;
+              width: 200px;
+              height: 200px;
+              margin: 0 auto;
+            }
+        
+            .svg-mask {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              mask: url(#svgMask);
+              animation: rotate 5s linear infinite;
+            }
+        
+            .svg-color {
+              width: 100px;
+              height: 100px;
+              margin: 20px auto;
+            }
+        
+            .svg-scale {
+              width: 100px;
+              height: 100px;
+              margin: 20px auto;
+            }
+        
+            @keyframes rotate {
+              0% {
+                transform: rotate(0deg);
+              }
+        
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+        
+            @keyframes colorChange {
+              0% {
+                fill: #f9f9f9;
+              }
+        
+              50% {
+                fill: #333;
+              }
+        
+              100% {
+                fill: #f9f9f9;
+              }
+            }
+        
+            @keyframes scale {
+              0% {
+                transform: scale(1);
+              }
+        
+              50% {
+                transform: scale(1.5);
+              }
+        
+              100% {
+                transform: scale(1);
+              }
+            }
+          </style>
+        </head>
+        <style>
+          .network img{
+              margin-right: 10px;
+            }
+          .chart {
+            width: 400px;
+            height: 200px;
+            border: 1px solid #ccc;
+            position: relative;
+
+          }
+          .bar {
+            fill: green;
+          }
+          .label {
+
+            font-size: 13px;
+          }
+        </style>
+        </head>
+        <body>
+          <div class="inf_tea">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A52e96e4266481b8228670fc6fbfb549749e1fe1b4d9c5298049e835187fa9ab5&amp;source=constructor" width="609" height="537" frameborder="0"></iframe>
+        </div>
+        <body>
+          
+        <div class="parent">
+            <div id="tea"><p class="text">Наш чай</p>
+            <ul id="tea-spisok">
+                <li class="a--item"><a href="">Под вечер</a></li>
+                <li class="a--item"><a href="">Под компанию</a></li>
+                <li class="a--item"><a href="">Под размышление</a></li>
+            </ul></div>
+            <div id="info"><p class="text">Инфо</p>
+            <ul id="info-spisok">
+                <li class="a--item"><a href="">О нас</a></li>
+                <li class="a--item"><a href="" >Доставка и оплата</a></li>
+                <li class="a--item"><a href="" >FAQ</a></li>
+            </ul></div>
+            <div class="contact-info">
+        <div>
+            <strong>Адрес:</strong>
+            <p>Петропавловск,Жабаева 256</p>
+        </div>
+        <div>
+            <strong>Телефон:</strong>
+            <p>+7 (123) 456-7890</p>
+        </div>
+        <div>
+            <strong>Email:</strong>
+            <p>info@example.com</p>
+        </div>
+        <div>
+            <strong>График работы:</strong>
+            <p>Понедельник - Пятница: 9:00 - 18:00</p>
+        </div>
+    </div>
+            <div id="sled"><p class="text">Следите за нами</p><div class="network"> <a href="https://www.instagram.com/KOZYBAYEV_UNIVERSITY_LIFE/?hl=ru"><img src="images/insta.png" alt=""></a><a href="https://t.me/SKGU_PK_2020"><img src="images/free-icon-telegram-logo-87413.png" alt=""> </a></div></div>
+            
+        </div>
+    </footer>
+    <script src="chart.js"></script>
+</body>
+</html>

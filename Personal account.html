@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<link rel="stylesheet" href="style.css">
+<title>Страница Регистрации</title>
+</head>
+<body>
+  <style>
+    #find {
+        fill: white;
+    }
+    #cart path {
+    fill: white;
+}
+</style>
+<body>
+    <header>
+    </div> <nav><a id="nav--link" class="" href="index.html">Главная</a>
+      <a id="nav--link" class="active" href="shop.html">Наш чай</a>
+       
+       <a id="nav--link" href="blog.html">Блог</a>
+        
+       <a id="nav--link" href="Personal account.html">Личный кабинет</a>
+              
+             </nav> 
+    </header>
+ </body>   
+ <script>
+  function UserData() {
+      this.Имя = "";
+      this.email = "";
+      this.Чай = "";
+      this.Грамм = "";
+      this.Подписка = false;
+      this.Комментарий = "";
+  }
+
+  var userData = new UserData();
+
+  function saveData() {
+      userData.Имя = document.getElementById('name').value;
+      userData.email = document.getElementById('email').value;
+      userData.Чай = document.getElementById('tea').value;
+      userData.Грамм = document.getElementById('gramm').value;
+      userData.Подписка = document.getElementById('subscribe').checked;
+      userData.Комментарий = document.getElementById('comments').value;
+      alert("Данные сохранены.");
+  }
+
+  function displayData() {
+      var dataContainer = document.getElementById('dataContainer');
+      dataContainer.innerHTML = "";
+      for (var key in userData) {
+          if (userData.hasOwnProperty(key)) {
+              dataContainer.innerHTML += "<p><strong>" + key + ":</strong> " + userData[key] + "</p>";
+          }
+      }
+  }
+</script>
+</head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: #a80000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a80000;
+}
+
+#dataContainer {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#dataContainer p {
+  margin-bottom: 10px;
+}
+
+#dataContainer p:last-child {
+  margin-bottom: 0;
+}
+</style>
+</head>
+<body>
+<h1 style="color: white;">Заказ чая</h1>
+<form>
+<label for="name">Имя:</label>
+<input type="text" id="name" name="name"><br>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email"><br>
+
+<label for="tea">Чай:</label>
+<select id="tea" name="tea">
+  <option value="black tea">Черный чай</option>
+  <option value="green tea">Зеленный чай</option>
+  <option value="oolong tea ">Чай Улун</option>
+  <option value="puer tea">Чай Пуэр</option>
+</select><br>
+<label for="gramm">Вес:</label>
+<select id="gramm" name="gramm">
+  <option value="50">50 грамм</option>
+  <option value="100">100 грамм</option>
+  <option value="150 ">150 грамм</option>
+  <option value="300">300 грамм</option>
+</select><br>
+<label for="subscribe">Подписаться на рассылку:</label>
+<input type="checkbox" id="subscribe" name="subscribe"><br>
+
+
+<label for="comments">Комментарии:</label>
+<textarea id="comments" name="comments"></textarea><br>
+
+<button type="button" onclick="saveData()">Сохранить данные</button>
+<br>
+<button type="button" onclick="displayData()">Показать данные</button>
+</form>
+
+<div id="dataContainer"></div>
+
+</main>
+</div>
+</body>
+</html>

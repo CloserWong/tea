@@ -1,0 +1,474 @@
+@font-face {
+    font-family: Logo;
+    src: url("images/19138.ttf");
+}
+@font-face {
+    font-family: navigation;
+    src: url("images/3976.ttf");
+}
+@font-face {
+    font-family: textO;
+    src: url(images/20011.ttf);
+}
+@font-face {
+    font-family: heading;
+    src: url(images/19939.otf);
+}
+*{
+    margin:0;
+}
+body {
+    background-image: url(images/bg-photo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0; /* Убираем отступы по умолчанию */
+    padding: 0; /* Убираем внутренние отступы по умолчанию */
+}
+
+header {
+    height: 100px;
+    width: 100%; /* Ширина занимает всю доступную ширину */
+    margin-top: 15px;
+}
+
+nav {
+    padding: 0; /* Убираем внутренние отступы */
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+.inf_tea{
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+nav>a{
+
+    text-decoration: none;
+    color:white;
+    padding: 0px 10px 0px 10px;
+    font-family: navigation;
+    font-size:1.5rem;
+    transition: all 0.3s;
+
+}
+#nav--link:hover{
+    color:white;
+
+}
+a:active{
+    color: white;
+}
+a:hover{
+    color:white;
+}
+#logo{
+    color: white;
+    float:left;
+    font-family: Logo;
+    font-size: 4rem;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-top:-1%;
+}
+
+#find,#cart{
+    height: 40px;
+    width: 40px;
+    float: right;
+    padding: 0px 10px 0 10px;
+}
+#icons{
+    color: white;
+    float: right;
+    display: inline-block;
+    width: fit-content;
+    margin-top: 0.7%;
+
+}
+#find:hover,#cart:hover{
+    fill:wheat;
+}
+#button--container{
+    height: 300px;
+    margin:20% 2% 0% 5%;
+    width: 95%;
+    font-family: navigation;
+}
+h2{
+    color: white;
+    width: fit-content;
+    Padding-bottom:50px;
+}
+#button{
+    padding:15px;
+    font-family: navigation;
+    border:1px solid white;
+    border-radius: 4px 4px 4px 4px;
+    margin-top:5%;
+    text-decoration: none;
+    color:white;
+    transition: all 0.6s;
+
+}
+#button:hover{
+    background-color: white;
+    color:wheat;
+}
+#content--container{
+    background-color: white;
+    height: 640px;
+}
+.textcols {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+    margin-bottom: 6%;
+}
+.textcols-item {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+	height: 350px;
+    margin-top:5%;
+    text-align: center;
+    border-left:1px solid black;
+    
+}
+
+.heading{
+    font-family: heading;
+    font-size: 3rem;
+}
+#border{
+    width: 30px;
+    border-bottom: 1px solid black;
+    margin:auto;
+    padding-top:30px;
+}
+#content--text{
+    font-family: heading;
+    font-size: 1.5rem;
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    font-weight: bold;
+}
+.content-link{
+    padding-top: 15px;
+    color:black;
+    text-decoration: none;
+    font-family: heading;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+    font-weight: bold;
+}
+.content-link:hover{
+    color:crimson;
+}
+.message--text{
+    font-family: heading;
+    font-size: 2rem;
+    text-align: center;
+}
+#email--input{
+    width: 70%;
+    height: 30px;
+    margin-left: 9.7%;
+    background-color: white;
+    font-family: heading;
+    font-size: 1.5rem;
+    border: none;
+}
+#submit--input{
+    background-color: black;
+    color:white;
+    width: 10%;
+    float:right;
+    height: 36px;
+    margin-right: 10%;
+    border: none;
+}
+#checkbox{
+    margin-left:9.8%;
+}
+.checkbox--text{
+    display: inline-block;
+    font-family: heading;
+}
+footer{
+    background-color: white;
+    padding-bottom: 2%;
+    
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-left:15%;
+    text-transform: uppercase;
+    font-family: navigation;
+    }
+#tea-spisok,#info-spisok{
+    list-style-type: none;
+    margin-left: -12%;
+    text-indent:0;
+    text-transform: uppercase;
+}
+.text{
+    font-weight: bold;
+    padding:20px 0 20px;
+    font-size:1rem;
+}
+.a--item{
+    padding-bottom: 5px;
+    font-size:0.8rem;
+    
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+#tea-price{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin-left:2.2%;
+}
+#img-item{
+    width: 95%;
+    height: 250px
+}
+#content--container--two{
+    background-color: white;
+    height: 100%;
+    margin-top:50px;
+    padding-top: 20px;
+    text-align: center;
+}
+.ad{
+    font-family: navigation;
+
+}
+.item{
+    transition: all 0.8s;
+}
+.last{
+    padding-bottom: 80px;;
+}
+.tea-name,.tea-price{
+    font-family: navigation;
+    text-align: left;
+    margin-left:2%;
+    padding-bottom:10px;
+}
+.tea-price{
+    padding-bottom:20px;
+    color:gray;
+}
+.item:hover{
+    filter: contrast(65%);
+}
+   
+   header  .navmenu{
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 0;
+    position: absolute;
+    z-index: 999;
+    transform: translateX(-22px);
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    border: 1px solid black;
+    text-align: center;
+    justify-content: center;
+    width: 120px;
+}
+
+header nav .havrmenu:hover .navmenu{
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+}
+
+Чтобы сделать ваш сайт адаптивным, следует использовать медиа-запросы в файле CSS. Медиа-запросы позволяют применять определенные стили в зависимости от характеристик устройства, таких как ширина экрана или ориентация. Вот пример того, как можно адаптировать ваш CSS для различных устройств:
+
+```css
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+/* Стили для планшетов */
+@media only screen and (min-width: 620px) and (max-width: 1024px) {
+    /* Пример: увеличиваем отступы для планшетов */
+    .text {
+        padding: 10px;
+    }
+    .parent{
+        width: 80%;
+        margin-left:10%;
+    }
+    .a--item{
+        margin-left:-20%;
+    }
+    #blog,#info,#tea{
+        width: fit-content;
+    }
+    .text{
+        width: fit-content;
+    }
+    footer{
+        padding-top:100px;
+        width: 100%;}
+    #sled{
+        width: fit-content;
+    }
+    #email--input{
+        margin-left:8%;
+        display:inline-block;
+    }
+    #message--container{
+        margin-top: 150px;
+        padding-bottom:4%;
+    }
+    #img-item{
+        height: 115px;
+    }
+    .item{
+        width: 80%;
+        height: 210px;
+        margin-left:10%;
+    }
+    .emft{
+        height: 50px;
+}
+    /* Другие стили для планшетов */
+}
+
+
+
+
+
+
+
+/* Стили для мобильных устройств */
+@media only screen and (min-width: 320px) and (max-width: 620px) {
+    /* Пример: уменьшаем размер шрифта для маленьких экранов */
+    .text {
+        font-size: 15px;
+    }
+    #logo{
+        font-size: 30px;
+    }
+    .textcols-item {
+        display: block;
+        text-align: center;
+        border-left: 1px solid black;
+        border-top:1px solid black;
+        height: 300px;
+        padding-bottom: 130px;
+    }
+    #content--container{
+        height: fit-content;
+        
+    }
+    .textcols-item:last-child{
+        padding-bottom:0;
+    }
+    .textcols{
+        display: block;
+    }
+    .parent{
+    display: block;
+
+    font-family: navigation;
+    
+        width: 100%;
+        margin-left:5%;
+    }
+    .a--item{
+        margin-left:-20%;
+    }
+    #blog,#info,#tea{
+        width: fit-content;
+    }
+    .text{
+        margin-top: 10px;
+        width: fit-content;
+    }
+    footer{
+        padding-top:20px;
+        width: 100%;}
+    #sled{
+        width: fit-content;
+    }
+    #email--input{
+        margin-left:8%;
+        width: 200px;
+        display:inline-block;
+    }
+    #submit--input{
+        width: 100px;
+    }
+    .checkbox--text{
+        font-size: 1rem;
+    }
+    #message--container{
+        margin-top: 30px;
+        padding-bottom:5%;
+    }
+
+#button--container{
+        margin-top:50%;
+    }
+    body{
+
+        background-image:url(images/bg-photo.jpeg);
+        background-attachment: fixed;
+        background-origin:padding-box;
+
+    }
+    #cart,#find{
+        width: 25px;
+        height: 25px;
+    }
+    #icons{
+        margin-top:6%;
+    }
+    #nav--link{
+        margin-left: 0;
+        font-size: 0.9rem;
+    padding-left:0px    }
+}
+
+
+
